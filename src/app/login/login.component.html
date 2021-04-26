@@ -1,1 +1,35 @@
-<p>login works!</p>
+<div class="container-fluid">
+  <h1>LOG IN</h1>
+  <hr>
+  <h4>Username</h4>
+  <input
+    class="input-lg"
+    type="text"
+    [(ngModel)]="username"
+  >
+  <br>
+  <h4>Password</h4>
+  <input
+    class="input-lg"
+    type="password"
+    [(ngModel)]="password"
+  >
+  <br>
+  <br>
+  <button class="btn btn-primary btn-lg"
+          [disabled]="clicked"
+          (click)="onLogin()">Login</button>
+  <!--Indent Spacing-->
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <button class="btn btn-primary btn-lg"
+          [disabled]="!clicked"
+          (click)="onLogout()">Logout</button>
+  <br>
+  <br>
+  {{ logintext }}
+  <br>
+</div>
+
+
+
+
